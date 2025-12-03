@@ -1,0 +1,208 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --background_footer: #ffffff;
+}
+
+/* @theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono); 
+}*/
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  display: flex;
+  border-color: #BAB573;
+  height: 67px;
+
+  @media screen and (min-width: 768px) {
+    height: 87px;
+  }
+}
+.header-wrapper {
+  position: fixed;
+  background-color: #1C2E13;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex: 1 auto;
+  justify-content: flex-start;
+  padding: 8px 20px;
+  z-index: 999;
+
+  @media screen and (min-width: 768px) {
+    padding: 15px 20px;
+  }
+}
+
+/* .footer-wrapper {
+} */
+
+.wrapper-logo {
+  max-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 auto;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.title {
+  font-weight: 700;
+  color: #BAB573;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-family: emoji;
+
+  @media screen and (min-width: 768px) {
+    font-size: 40px;
+  }
+}
+
+.desctiption {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.wrapper-main {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 65px;
+}
+
+.products {
+  padding: 12px;
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 24px;
+  font-size: 11px;
+  position: fixed;
+  bottom: 0;
+}
+
+.footer__aside {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  display: grid;
+}
+
+.carousel-img-wrapper {
+  img {
+    object-fit: cover;
+  }
+}
+
+.info_section {
+  padding: 20px;
+
+  h2 {
+    text-transform: capitalize;
+    font-size: 16px;
+  }
+
+  p {
+    text-transform: capitalize;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+}
+
+:root {
+  --header-is-sticky: 1;
+}
+
+#shopify-section-sections--17166190084156__header {
+  --header-grid: "primary-nav logo secondary-nav" / minmax(0, 1fr) auto
+    minmax(0, 1fr);
+  --header-padding-block: 1rem;
+  --header-transparent-header-text-color: 255 255 255;
+  --header-separation-border-color: 43 58 52 / 0.15;
+
+  position: relative;
+  z-index: 5;
+}
+
+@media screen and (min-width: 700px) {
+  #shopify-section-sections--17166190084156__header {
+    --header-padding-block: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #shopify-section-sections--17166190084156__header {
+  }
+}
+#shopify-section-sections--17166190084156__header {
+  position: sticky;
+  top: 0;
+}
+
+.shopify-section--announcement-bar
+  ~ #shopify-section-sections--17166190084156__header {
+  top: calc(
+    var(--announcement-bar-is-sticky, 0) * var(--announcement-bar-height, 0px)
+  );
+}
+#shopify-section-sections--17166190084156__header {
+  --header-logo-width: 70px;
+}
+
+@media screen and (min-width: 700px) {
+  #shopify-section-sections--17166190084156__header {
+    --header-logo-width: 100px;
+  }
+}
+
+.icon-cart {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+
+  path {
+    fill: #ffffff;
+  }
+}
+
+.icon-hamburger {
+  height: 24px;
+  width: 24px;
+  padding: 0;
+
+  path {
+    fill: #ffffff;
+  }
+}
